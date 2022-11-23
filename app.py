@@ -25,7 +25,7 @@ data = user_input_features()
 
 #Preprocessing
 
-if data['FIRST NUMBER'] == data['SECOND NUMBER] & data['SECOND NUMBER] == data['THIRD NUMBER']:
+if data['FIRST NUMBER'] == data['SECOND NUMBER] & data['SECOND NUMBER'] == data['THIRD NUMBER']:
     Keymax = 'None'
 else:    
     Keymax = max(data, key= lambda x: data[x])
