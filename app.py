@@ -25,11 +25,7 @@ data = user_input_features()
 
 #Preprocessing
 
-lk, lv = [],[]
-for (key,value) in data.items():
-  lk.append(key)
-  lv.append(value)
-
+lk, lv = list(data.keys()),list(data.values())
 maxv = max(lv)
 count=0
 
@@ -38,16 +34,17 @@ for i in lv:
     count+=1
     
 if count>1:
-    Keymax = 'None'
+    maxval = 'None'
 else:    
-    Keymax = maxv
+    maxval = maxv
 
 
 
 #Model Inferencing
 
 st.subheader('Largest Number')
-if Keymax == 'None':
-    st.write(Keymax)    
+if maxval == 'None':
+    st.write(maxval)    
 else:
-    st.write(Keymax,data[Keymax])
+    Keymax = lk[lv.index(maxval)]
+    st.write(Keymax,maxval)
