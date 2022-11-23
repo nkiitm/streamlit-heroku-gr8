@@ -25,11 +25,17 @@ data = user_input_features()
 
 #Preprocessing
 
-Keymax = max(data, key= lambda x: data[x])
+if data['FIRST NUMBER'] == data['SECOND NUMBER] & data['SECOND NUMBER] == data['THIRD NUMBER']:
+    Keymax = 'None'
+else:    
+    Keymax = max(data, key= lambda x: data[x])
 
 
 
 #Model Inferencing
 
 st.subheader('Largest Number')
-st.write(Keymax,data[Keymax])
+if Keymax == 'None':
+    st.write(Keymax)    
+else:
+    st.write(Keymax,data[Keymax])
