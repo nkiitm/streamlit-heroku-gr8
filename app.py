@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 st.write("""
 # Largest Number Finder App
@@ -22,10 +21,6 @@ def user_input_features():
     return data
 
 data = user_input_features() 
-df = pd.DataFrame(data, index=[0])
-
-st.subheader('User Input')
-st.write(df.to_dict())
 
 
 #Preprocessing
@@ -37,4 +32,4 @@ Keymax = max(data, key= lambda x: data[x])
 #Model Inferencing
 
 st.subheader('Largest Number')
-st.write(Keymax)
+st.write(Keymax,data[Keymax])
