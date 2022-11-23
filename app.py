@@ -10,9 +10,9 @@ This app finds the largest number
 st.header('User Input')
 
 def user_input_features():
-    num1 = st.number_input("FIRST NUMBER",min_value=-20000,max_value=400000 ,step=1)
-    num2 = st.number_input("SECOND NUMBER",min_value=-20000,max_value=400000 ,step=1)
-    num3 = st.number_input("THIRD NUMBER",min_value=-20000,max_value=400000 ,step=1)
+    num1 = st.number_input("FIRST NUMBER")
+    num2 = st.number_input("SECOND NUMBER")
+    num3 = st.number_input("THIRD NUMBER")
 
     data = {'FIRST NUMBER': num1,
             'SECOND NUMBER': num2,           
