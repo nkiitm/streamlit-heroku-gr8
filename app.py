@@ -25,10 +25,22 @@ data = user_input_features()
 
 #Preprocessing
 
-if (data['FIRST NUMBER'] == data['SECOND NUMBER']) or (data['SECOND NUMBER'] == data['THIRD NUMBER']):
+lk, lv = [],[]
+for (key,value) in data.items():
+  lk.append(key)
+  lv.append(value)
+
+maxv = max(lv)
+count=0
+
+for i in lv:
+  if i==maxv:
+    count+=1
+    
+if count>1:
     Keymax = 'None'
 else:    
-    Keymax = max(data, key= lambda x: data[x])
+    Keymax = maxv
 
 
 
