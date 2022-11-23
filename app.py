@@ -3,7 +3,7 @@ import streamlit as st
 st.write("""
 # Largest Number Finder App
 
-This app finds the largest number
+This app finds the largest among 3 given numbers (value greater than the other two)
 """)
 #Get Input
 
@@ -25,7 +25,7 @@ data = user_input_features()
 
 #Preprocessing
 
-if (data['FIRST NUMBER'] == data['SECOND NUMBER']) & (data['SECOND NUMBER'] == data['THIRD NUMBER']):
+if (data['FIRST NUMBER'] == data['SECOND NUMBER']) or (data['SECOND NUMBER'] == data['THIRD NUMBER']):
     Keymax = 'None'
 else:    
     Keymax = max(data, key= lambda x: data[x])
@@ -36,6 +36,6 @@ else:
 
 st.subheader('Largest Number')
 if Keymax == 'None':
-    st.write('None. All numbers are equal')    
+    st.write(Keymax)    
 else:
     st.write(Keymax,data[Keymax])
