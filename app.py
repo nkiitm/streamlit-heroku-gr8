@@ -36,6 +36,6 @@ else:
 
 st.subheader('Largest Number')
 if Keymax == 'None':
-    st.write(Keymax)    
+    st.write('None. All numbers are equal')    
 else:
     st.write(Keymax,data[Keymax])
